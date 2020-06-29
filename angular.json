@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/sass/styles.scss"
             ],
             "scripts": []
           },
@@ -92,7 +92,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/sass/styles.scss"
             ],
             "scripts": []
           }
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TaskManagementSystem"
+    }
+  },
+  "defaultProject": "TaskManagementSystem",
+  "cli": {
+    "analytics": "0761eb94-53d3-4f7b-9b67-a83d8418bf34"
+  }
 }
