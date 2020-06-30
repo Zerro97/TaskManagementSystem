@@ -1,0 +1,33 @@
+// Button
+%buttons {
+    display: inline-block;
+    border: $button-border-width $button-border-style $button-border-color;
+    border-radius: $button-border-radius;
+    background: $button-background;
+    color: $button-color;
+    font-weight: $button-font-weight;
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    padding: 0.3rem 0.5rem;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+// Buttons on hover
+%buttons-hover {
+    border: $button-border-width $button-border-style $button-background-hover;
+    color: white;
+    background: $button-background-hover;
+    text-decoration: none;
+}
+
+// Apply styles to .button class, button element, and button-based inputs
+#{$buttons} {
+    @extend %buttons;
+
+    &:hover {
+        @extend %buttons-hover;
+    }
+}

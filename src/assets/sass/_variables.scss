@@ -1,0 +1,68 @@
+/* Containers */
+$x-small: 720px;
+$small: 800px;
+$medium: 1200px;
+$large: 1300px;
+
+/* Breakpoints */
+$mobile: 620px;
+$tablet: $small;
+$desktop: $medium;
+
+/* Colors */
+$background: #fcfcfc;
+$primary-color: #5183f5;
+$secondary-color: rgb(255, 90, 95);
+$light-grey: #b5b5b5;
+
+/* Typography */
+// Body
+$font-size: 1rem;
+$small-font-size: 0.85rem;
+$font-color: #454545;
+$font-weight: normal;
+$font-weight-bold: 600;
+$font-family: BlinkMacSystemFont, -apple-system, 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+
+// Headings
+$heading-font-color: #111;
+$heading-font-weight: 600;
+$heading-font-family: BlinkMacSystemFont, -apple-system, 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-font-margin: 0;
+
+// Heading font size
+$h1: 2.5rem;
+$h2: 2.2rem;
+$h3: 1.85rem;
+$h4: 1.7rem;
+$h5: 1.4rem;
+
+$h1-mobile: 1.85rem;
+$h2-mobile: 1.7rem;
+$h3-mobile: 1.5rem;
+$h4-mobile: 1.3rem;
+$h5-mobile: 1rem;
+
+/* Border */
+$border-width: 2px;
+$border-style: solid;
+$border-color: #888;
+$border-radius: 4px;
+$borders: $border-width $border-style $border-color;
+
+/* Buttons */
+$primary-hover: lighten($primary-color, 33%);
+$button-background: $primary-color;
+$button-background-hover: darken($primary-color, 15%);
+
+$button-color: white;
+$button-font-weight: 600;
+$button-font-family: BlinkMacSystemFont, -apple-system, 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+$button-font-size: 0.8rem;
+
+$button-border-width: 2px;
+$button-border-style: solid;
+$button-border-color: $primary-color;
+$button-border-radius: 4px;
+
+$buttons: ('.button, a.button, button, [type=submit], [type=button]');

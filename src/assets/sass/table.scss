@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+    //overflow-x: auto;
+    display: block;
+}
+
+// Extra border underneath header
+th {
+    border-bottom: 2px solid $border-color;
+}
+
+tr {
+    border-bottom: 1px solid $border-color;
+}
+
+tr:last-child {
+    border-bottom: 2px solid $border-color;
+}
+

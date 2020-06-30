@@ -1,31 +1,37 @@
-<div>
-    <h2>Task Details</h2>
-    <button>Add Task</button>
+<div class="header">
+    <h5 class="header__title">Task Details</h5>
+    <button class="header__button">Add Task</button>
 </div>
-<div>
-    <div>
-        <label>Show</label>
+<div class="filters">
+    <div class="filters__left">
+        <label class="filters__label">Show </label>
         <select id="task-count" name="task-count">
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="20">20</option>
             <option value="50">50</option>
         </select>
-        <label>entries</label>
+        <label class="filters__label"> entries</label>
     </div>
-    <div>
-        <label>Order By:</label>
-        <select id="task-column" name="task-column">
-            <option value="Contact Name">Contact Name</option>
-            <option value="Quote Type">Quote Type</option>
-            <option value="Quote ID">Quote ID</option>
-            <option value="Task">Task</option>
-            <option value="Task Type">Task Type</option>
-            <option value="Due Date">Due Date</option>
-        </select>
-        <label>Descending</label>
-        <input type="checkbox">
-        <label>Search:</label>
-        <input type="text">
+    <div class="filters__right">
+        <div class="filters__input">
+            <label>Order By:</label>
+            <select id="task-column" name="task-column">
+                <option value="Contact Name">Contact Name</option>
+                <option value="Quote Type">Quote Type</option>
+                <option value="Quote ID">Quote ID</option>
+                <option value="Task">Task</option>
+                <option value="Task Type">Task Type</option>
+                <option value="Due Date">Due Date</option>
+            </select>
+        </div>
+        <div class="filters__input">
+            <label>Descending</label>
+            <input type="checkbox">
+        </div>
+        <div class="filters__input">
+            <label>Search:</label>
+            <input type="text">
+        </div>
     </div>
 </div>

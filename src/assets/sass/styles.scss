@@ -1,3 +1,8 @@
 @import './variables';
 @import './mixins';
-@import '~bootstrap/scss/bootstrap';
+@import './reset';
+@import './scaffolding';
+@import './button';
+@import './table';
+
+//@import '~bootstrap/scss/bootstrap';
