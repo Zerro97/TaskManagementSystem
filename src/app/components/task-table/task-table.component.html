@@ -8,6 +8,5 @@
         <th>Task Type</th>
         <th></th>
     </tr>
-    <tr app-task></tr>
-    <tr app-task></tr>
+    <tr app-task *ngFor='let task of tasks'></tr>
 </table>

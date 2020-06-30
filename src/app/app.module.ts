@@ -12,10 +12,16 @@ import { HomeComponent } from './pages/home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CockpitComponent } from './components/cockpit/cockpit.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TaskDetailsComponent } from './pages/task/task-details/task-details.component';
+import { LoginService } from './services/login.service';
+import { AuthGuardSerivce } from './services/authGuard.service';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
-  { path: 'Home', component: HomeComponent }
+  { path: 'Home', component: HomeComponent, canActivate:[AuthGuardSerivce]  },
+  { path: '', redirectTo:'/Login', pathMatch:'full'},
+  { path: '**', component: NotFoundComponent}
 ]
 
 @NgModule({
@@ -25,7 +31,9 @@ const routes: Routes = [
     TaskTableComponent,
     LoginComponent,
     HomeComponent,
-    CockpitComponent
+    CockpitComponent,
+    TaskDetailsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [LoginService, AuthGuardSerivce],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

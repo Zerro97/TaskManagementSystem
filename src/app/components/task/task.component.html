@@ -5,7 +5,7 @@
 <td>hi</td>
 <td>hi</td>
 <td>
-    <fa-icon [icon]="faEye"></fa-icon>
-    <fa-icon [icon]="faEdit"></fa-icon>
-    <fa-icon [icon]="faTrash"></fa-icon>
+    <fa-icon (click)="onViewTask()" [icon]="faEye"></fa-icon>
+    <fa-icon (click)="onUpdateTask()" [icon]="faEdit"></fa-icon>
+    <fa-icon (click)="onDeleteTask()" [icon]="faTrash"></fa-icon>
 </td>

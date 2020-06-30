@@ -16,4 +16,15 @@ export class TaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onViewTask() {
+    
+  }
+
+  onUpdateTask() {
+
+  }
+
+  onDeleteTask() {
+
+  }
 }
