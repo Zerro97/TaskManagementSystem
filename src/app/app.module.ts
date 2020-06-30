@@ -11,6 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CockpitComponent } from './components/cockpit/cockpit.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
@@ -31,7 +32,8 @@ const routes: Routes = [
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
