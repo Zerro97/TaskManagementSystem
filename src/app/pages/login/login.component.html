@@ -1,13 +1,15 @@
 <div class="login-container">
     <div class="login">
-        <h3>Login</h3>
+        <h3 class="login__title">Login</h3>
         <div class="login__input">
+            <fa-icon class="login__icon" [icon]="faUser"></fa-icon>
             <input class="login__text-input" type="text" placeholder="Username">
         </div>
         <div class="login__input">
+            <fa-icon class="login__icon" [icon]="faLock"></fa-icon>
             <input class="login__text-input" type="password" placeholder="Password">
         </div>
-            <button (click)="onLogin()">Login</button>
+            <button class="login__button" (click)="onLogin()">Login</button>
             <label>Not a member? <a (click)="onSignUp()">Sign up</a></label>
     </div>
 </div>

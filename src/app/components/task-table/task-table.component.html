@@ -8,5 +8,13 @@
         <th>Task Type</th>
         <th></th>
     </tr>
-    <tr app-task *ngFor='let task of tasks'></tr>
+    <tr app-task *ngFor='let task of tasks | async | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize' ></tr>
+
+    <ngb-pagination
+        [(page)]="page"
+        [pageSize]="pageSize"
+        [collectionSize]="collectionSize"></ngb-pagination>
+
+
+    <!--<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>-->
 </table>

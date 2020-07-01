@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { TaskService } from 'src/app/services/task.service';
+import { Observable } from 'rxjs';
+import { Task } from 'src/app/models/task.model';
 
 @Component({
   selector: 'app-task-table',
@@ -7,13 +9,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./task-table.component.scss']
 })
 export class TaskTableComponent implements OnInit {
-  tasks = [{}];
+  tasks: Observable<Task[]>;
+  page: number = 1;
+  pageSize: number = 5;
+  collectionSize: number;
 
-  constructor(private http : HttpClient) { }
+  constructor(private service: TaskService) {
+    this.tasks = service.getTask();
+  }
 
   ngOnInit(): void {
-    this.http.get<[]>('https://localhost:44360/api/Quote').subscribe(data => {
-      this.tasks = data;
-    });
+
   }
 }
